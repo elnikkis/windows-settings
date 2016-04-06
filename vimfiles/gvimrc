@@ -1,0 +1,25 @@
+" gvimrc for windows
+
+" Fix menu
+" ref: http://sea-mountain.hatenablog.jp/entry/20100906/1283792259
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
+
+" Set font as Ricty Diminished if exists
+if has('win32')
+    set guifont=Ricty_Diminished:h10:cSHIFTJIS,MS_Gothic:h12:cSHIFTJIS
+endif
+
+" Set view (window) size
+set lines=50
+set columns=90
+
+" Set windows-like keymap
+":map <C-a> GVgg
+":map <C-c> "+y
+":map <C-x> "+x
+":map <C-v> "+gP
+
+syntax enable
+colorscheme jellybeans
