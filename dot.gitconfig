@@ -1,0 +1,12 @@
+[user]
+	name = elnikkis
+	email = noahluces@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = vim
+	autocrlf = false
+[alias]
+	st = status
+	ci = commit
+	co = checkout
