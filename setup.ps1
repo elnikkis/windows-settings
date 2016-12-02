@@ -8,6 +8,8 @@ Install-Package thunderbird -Provider Chocolatey
 Install-Package sumatrapdf -Provider Chocolatey
 Install-Package winscp -Provider chocolatey
 Install-Package filezilla -Provider Chocolatey
-Install-Package owncloud-client -Provider Chocolatey
-Install-Package GoogleJapaneseInput -Provider chocolatey
+#Install-Package owncloud-client -Provider Chocolatey
+#Install-Package GoogleJapaneseInput -Provider chocolatey
 Install-Package 7zip -Provider chocolatey
+#Install-Package VirtualBox -Provide chocolatey
+#Install-Package Vagrant -Provide chocolatey
