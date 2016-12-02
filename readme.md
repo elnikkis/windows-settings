@@ -21,17 +21,29 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 
 ### インストール
 
+`packages.config`をダウンロードする。
 PowerShellを管理者権限で起動し、以下のコマンドを実行する。
 
 ```
-choco install packages.config
+choco install packages.config -y
 ```
 
 
-## その他の初期設定
+## 設定ファイルの設置
+
+Gitが入ったのでリポジトリごと取ってくる。
+
+```
+git clone https://github.com/elnikkis/windows-settings.git
+```
 
 vimfilesフォルダをホームディレクトリ以下に移動する。またはジャンクションなどを作成する。
 `.latexmkrc`と`.gitconfig`もホームディレクトリに配置する（Windowsではシンボリックリンクを作成するのが面倒なのでコピーが良い）。
+
+
+## 手動インストール
+
+Ricty Diminished
 
 
 ## Vagrant
