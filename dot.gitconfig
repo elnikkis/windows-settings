@@ -12,4 +12,4 @@
 	co = checkout
 	ldiff = difftool -y -t latex
 [difftool.latex]
-	cmd = latexdiff -e utf8 -t CFONT "$LOCAL" "$REMOTE"
+	cmd = latexdiff -e utf8 -t INVISIBLE -s COLOR "$LOCAL" "$REMOTE"
