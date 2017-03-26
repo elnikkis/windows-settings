@@ -76,6 +76,6 @@ wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
 tar Jxvf Python-3.6.1.tar.xz
 cd Python-3.6.1
 # makeしたときに足りないといわれるものをaptitude searchして入れている
-apt-get install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncurses5-dev libgdbm-dev liblzma-dev
+apt-get install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncurses5-dev libgdbm-dev liblzma-dev
 ./configure && make && make altinstall
 
