@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # HOMEを整える
-
 mkdir -p ~/repos
+
+# 未定義の変数を使うと怒られるようにする
+set -u
 
 # dotfilesの取得・配置
 if [ ! -e ~/repos/dotfiles ] ; then
@@ -13,8 +15,16 @@ if [ ! -e ~/repos/dotfiles ] ; then
     yes n | python makelink.py
 fi
 
+# windows-settingsの配置
 if [ ! -e ~/repos/windows-settings ] ; then
     cd ~/repos
     git clone https://github.com/elnikkis/windows-settings.git
     cp ~/repos/windows-settings/WSL/start_sshd.sh ~/
+fi
+
+# venvでPython環境を作る
+if [ ! -e ~/pyvenv ] ; then
+    mkdir ~/pyvenv
+    python3.6 -m venv ~/pyvenv/default
+    # これで、source ~/pyvenv/default/bin/activateでpython=python3.6になる
 fi
