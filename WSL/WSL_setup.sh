@@ -79,3 +79,9 @@ cd Python-3.6.1
 apt-get install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncurses5-dev libgdbm-dev liblzma-dev
 ./configure && make && make altinstall
 
+
+# Homeのセットアップスクリプトを呼び出す
+cd /tmp
+curl https://raw.githubusercontent.com/elnikkis/windows-settings/master/WSL/home_setup.sh > home_setup.sh
+sudo -u nicky bash home_setup.sh
+
