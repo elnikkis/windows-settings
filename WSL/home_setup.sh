@@ -28,3 +28,10 @@ if [ ! -e ~/pyvenv ] ; then
     python3.6 -m venv ~/pyvenv/default
     # これで、source ~/pyvenv/default/bin/activateでpython=python3.6になる
 fi
+
+# deinのインストール
+if [ ! -e ~/.local/share/dein ] ; then
+    curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+    sh ./installer.sh ~/.local/share/dein
+fi
+
