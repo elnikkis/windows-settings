@@ -23,11 +23,11 @@ if [ ! -e ~/repos/windows-settings ] ; then
 fi
 
 # venvでPython環境を作る
-#if [ ! -e ~/pyvenv ] ; then
-#    mkdir ~/pyvenv
-#    python3.6 -m venv ~/pyvenv/default
-#    # これで、source ~/pyvenv/default/bin/activateでpython=python3.6になる
-#fi
+if [ ! -e ~/pyvenv ] ; then
+    mkdir ~/pyvenv
+    python3.7 -m venv ~/pyvenv/default
+    # これで、source ~/pyvenv/default/bin/activateでpython=python3.xになる
+fi
 
 # deinのインストール
 #if [ ! -e ~/.local/share/dein ] ; then
