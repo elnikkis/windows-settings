@@ -36,3 +36,5 @@ fi
 #    sh ./installer.sh ~/.local/share/dein
 #fi
 
+pip3 install --user sphinx sphinx-autobuild doc8
+

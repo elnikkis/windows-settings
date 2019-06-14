@@ -28,16 +28,14 @@ dpkg-reconfigure locales
 
 # パッケージのインストール
 echo "Installing packages..."
-apt install -y man build-essential git llvm tmux rsync curl clang python-dev python-pip python3-dev python3-pip ssh vim-nox
-# Pythonをコンパイルするときの依存ライブラリなど
-#apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncurses5-dev libgdbm-dev liblzma-dev
+apt install -y man build-essential git llvm tmux rsync curl clang python-dev python-pip python3-dev python3-pip ssh vim-nox inotify-tools
 
 # Python 3のbuild dependencyのインストール
 if grep 'deb-src http://deb.debian.org/debian stretch main' /etc/apt/sources.list > /dev/null ; then
     echo 'deb-src http://deb.debian.org/debian stretch main' >> /etc/apt/sources.list
     echo 'Added deb-src line to /etc/apt/sources.list'
 fi
-apt build-dep python3
+apt build-dep -y python3
 
 #TODO /usr/local/src 以下を使うことを検討
 # ref: https://www.python.org/downloads/release/python-361/
