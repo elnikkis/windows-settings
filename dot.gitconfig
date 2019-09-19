@@ -5,11 +5,16 @@
 	ui = auto
 [core]
 	editor = vim
-	autocrlf = false
+	autoCRLF = false
 [alias]
 	st = status
 	ci = commit
 	co = checkout
+	br = branch
 	ldiff = difftool -y -t latex
+[diff]
+	tool = WinMerge
 [difftool.latex]
 	cmd = latexdiff -e utf8 -t INVISIBLE -s COLOR "$LOCAL" "$REMOTE"
+[difftool "WinMerge"]
+    cmd = WinMergeU.exe -e -r -u -x -wl -wr -dl \"a/$MERGED\" -dr \"b/$MERGED\" \"$LOCAL\" \"$REMOTE\"
