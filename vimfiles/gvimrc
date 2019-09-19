@@ -23,3 +23,5 @@ set columns=90
 
 syntax enable
 colorscheme jellybeans
+
+set showtabline=2
