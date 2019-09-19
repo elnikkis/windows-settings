@@ -29,8 +29,7 @@ apt-get update
 
 # パッケージのインストール
 echo "Installing packages..."
-apt-get install -y build-essential git
-
+apt-get install -y build-essential git llvm
 
 # sshの設定
 echo "Setting sshd..."
@@ -68,4 +67,23 @@ add-apt-repository ppa:neovim-ppa/unstable -y
 apt-get update
 apt-get install -y python-dev python-pip python3-dev python3-pip
 apt-get install -y neovim
+pip3 install neovim
+pip3 install jedi
+
+
+# Python 3.6のインストール
+# ref: https://www.python.org/downloads/release/python-361/
+cd /tmp
+wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
+tar Jxvf Python-3.6.1.tar.xz
+cd Python-3.6.1
+# makeしたときに足りないといわれるものをaptitude searchして入れている
+apt-get install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncurses5-dev libgdbm-dev liblzma-dev
+./configure && make && make altinstall
+
+
+# Homeのセットアップスクリプトを呼び出す
+cd /tmp
+curl https://raw.githubusercontent.com/elnikkis/windows-settings/master/WSL/home_setup.sh > home_setup.sh
+sudo -u nicky bash home_setup.sh
 
