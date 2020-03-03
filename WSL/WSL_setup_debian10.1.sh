@@ -36,7 +36,7 @@ dpkg-reconfigure locales
 
 # パッケージのインストール
 echo "Installing packages..."
-apt install -y man build-essential git llvm tmux rsync curl clang python-dev python-pip python3-dev python3-pip ssh vim-nox inotify-tools neovim python-neovim python3-neovim
+apt install -y man build-essential git llvm tmux rsync curl clang python-dev python-pip python3-dev python3-pip python3-venv ssh vim-nox inotify-tools neovim python-neovim python3-neovim
 
 # Python 3のbuild dependencyのインストール
 if grep "deb-src http://deb.debian.org/debian $DEBIAN_VERSION main" /etc/apt/sources.list > /dev/null ; then
