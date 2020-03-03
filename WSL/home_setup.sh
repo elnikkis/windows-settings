@@ -38,3 +38,6 @@ fi
 
 pip3 install --user sphinx sphinx-autobuild doc8
 
+pip install --user pynvim
+pip3 install --user pynvim
+
